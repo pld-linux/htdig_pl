@@ -1,27 +1,31 @@
-Summary:        Set of polish messages for ht://Dig
-Summary(pl):    Zestaw polskich komunikatów do ht://Dig-a
-Name:           htdig_pl
-Version:        0.1
-Release:        3
-Group:          Networking/Utilities
-Group(pl):      Sieciowe/Narzêdzia
-Copyright:      GPL
-Source:         %{name}-%{version}.tgz
-Buildarch:      noarch
+Summary:	Set of polish messages for ht://Dig
+Summary(pl):	Zestaw polskich komunikatów do ht://Dig-a
+Name:		htdig_pl
+Version:	0.1
+Release:	3
+License:	GPL
+Group:		Networking/Utilities
+Group(de):	Netzwerkwesen/Werkzeuge
+Group(es):	Red/Utilitarios
+Group(pl):	Sieciowe/Narzêdzia
+Group(pt_BR):	Rede/Utilitários
+Source0:	%{name}-%{version}.tgz
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Requires:	htdig
 
 %define		_sysconfdir	/etc/htdig
 
 %description
-These are some configuration files that allows ht://Dig search engine 
-to work in Polish language. Package contains a sample config file, 
+These are some configuration files that allows ht://Dig search engine
+to work in Polish language. Package contains a sample config file,
 templates and a sample entry to search web page.
 
 %description -l pl
 Pakiet zawiera kilka plików konfiguracyjnych, które umo¿liwiaj±
-przeszukiwarce ht://Dig na pracê w jêzyku polskim. W sk³ad pakietu wchodzi
-przyk³adowy plik konfiguracyjny, szablony stron oraz przyk³adowa strona
-wej¶ciowa do wyszukiwarki.
+przeszukiwarce ht://Dig na pracê w jêzyku polskim. W sk³ad pakietu
+wchodzi przyk³adowy plik konfiguracyjny, szablony stron oraz
+przyk³adowa strona wej¶ciowa do wyszukiwarki.
 
 %prep
 %setup -q -n htdig_pl
@@ -40,6 +44,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%config /etc/htdig/htdig_pl.conf
+%config %{_sysconfdir}/htdig_pl.conf
 %config(missingok) /home/httpd/html/search_pl.html
 /var/lib/htdig/common/*pl.html
