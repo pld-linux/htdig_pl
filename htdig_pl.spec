@@ -9,7 +9,7 @@ Copyright:      GPL
 Source:         %{name}-%{version}.tgz
 Patch:		htdig_pl-paths.patch
 Buildarch:      noarch
-Buildroot:      /tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir	/etc/htdig
 
