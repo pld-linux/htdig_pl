@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Source0:	%{name}-%{version}.tgz
+# Source0-md5:	64335a24b165cba6a4a9710905962d8c
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	htdig
