@@ -2,12 +2,11 @@ Summary:        Set of polish messages for ht://Dig
 Summary(pl):    Zestaw polskich komunikatów do ht://Dig-a
 Name:           htdig_pl
 Version:        0.1
-Release:        2
+Release:        3
 Group:          Networking/Utilities
 Group(pl):      Sieciowe/Narzêdzia
 Copyright:      GPL
 Source:         %{name}-%{version}.tgz
-Patch:		htdig_pl-paths.patch
 Buildarch:      noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -26,14 +25,13 @@ wej¶ciowa do wyszukiwarki.
 
 %prep
 %setup -q -n htdig_pl
-%patch -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{etc/htdig,var/state/htdig/common,home/httpd/html}
+install -d $RPM_BUILD_ROOT/{etc/htdig,var/lib/htdig/common,home/httpd/html}
 
 install custom_pl.html header_pl.html nomatch_pl.html syntax_pl.html \
-	footer_pl.html 	$RPM_BUILD_ROOT/var/state/htdig/common
+	footer_pl.html 	$RPM_BUILD_ROOT/var/lib/htdig/common
 install search_pl.html 	$RPM_BUILD_ROOT/home/httpd/html
 install htdig_pl.conf 	$RPM_BUILD_ROOT%{_sysconfdir}
 
@@ -44,4 +42,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %config /etc/htdig/htdig_pl.conf
 %config(missingok) /home/httpd/html/search_pl.html
-/var/state/htdig/common/*pl.html
+/var/lib/htdig/common/*pl.html
