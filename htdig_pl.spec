@@ -7,9 +7,9 @@ License:	GPL
 Group:		Networking/Utilities
 Source0:	%{name}-%{version}.tgz
 # Source0-md5:	64335a24b165cba6a4a9710905962d8c
+Requires:	htdig
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	htdig
 
 %define		_sysconfdir	/etc/htdig
 
@@ -25,7 +25,7 @@ wchodzi przyk³adowy plik konfiguracyjny, szablony stron oraz
 przyk³adowa strona wej¶ciowa do wyszukiwarki.
 
 %prep
-%setup -q -n htdig_pl
+%setup -q -n %{name}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -41,6 +41,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%config %{_sysconfdir}/htdig_pl.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/htdig_pl.conf
 %config(missingok) /home/httpd/html/search_pl.html
 /var/lib/htdig/common/*pl.html
