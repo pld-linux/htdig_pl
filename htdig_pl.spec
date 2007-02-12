@@ -1,5 +1,5 @@
 Summary:	Set of polish messages for ht://Dig
-Summary(pl):	Zestaw polskich komunikatów do ht://Dig-a
+Summary(pl.UTF-8):   Zestaw polskich komunikatÃ³w do ht://Dig-a
 Name:		htdig_pl
 Version:	0.1
 Release:	3
@@ -18,11 +18,11 @@ These are some configuration files that allows ht://Dig search engine
 to work in Polish language. Package contains a sample config file,
 templates and a sample entry to search web page.
 
-%description -l pl
-Pakiet zawiera kilka plików konfiguracyjnych, które umo¿liwiaj±
-przeszukiwarce ht://Dig na pracê w jêzyku polskim. W sk³ad pakietu
-wchodzi przyk³adowy plik konfiguracyjny, szablony stron oraz
-przyk³adowa strona wej¶ciowa do wyszukiwarki.
+%description -l pl.UTF-8
+Pakiet zawiera kilka plikÃ³w konfiguracyjnych, ktÃ³re umoÅ¼liwiajÄ…
+przeszukiwarce ht://Dig na pracÄ™ w jÄ™zyku polskim. W skÅ‚ad pakietu
+wchodzi przykÅ‚adowy plik konfiguracyjny, szablony stron oraz
+przykÅ‚adowa strona wejÅ›ciowa do wyszukiwarki.
 
 %prep
 %setup -q -n %{name}
