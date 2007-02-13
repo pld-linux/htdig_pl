@@ -1,5 +1,5 @@
 Summary:	Set of polish messages for ht://Dig
-Summary(pl.UTF-8):   Zestaw polskich komunikatów do ht://Dig-a
+Summary(pl.UTF-8):	Zestaw polskich komunikatów do ht://Dig-a
 Name:		htdig_pl
 Version:	0.1
 Release:	3
